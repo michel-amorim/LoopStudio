@@ -1,0 +1,49 @@
+// media query
+
+@mixin d($size) {
+  @if $size == l {
+  } @else if $size == t {
+    @media screen and (max-width: $t-device) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (max-width: $m-device) {
+      @content;
+    }
+  }
+}
+
+// h2, h2
+@mixin h($size) {
+  @if $size == 1 {
+    font-size: 3.2rem;
+  }
+  @if $size == 2 {
+    font-size: 2.1rem;
+  }
+
+  // Mobile
+
+  @if $size == h1m {
+    font-size: 2.2rem;
+    line-height: 1.8rem;
+  } @else if $size == h2m {
+    font-size: 1.9rem;
+  }
+}
+
+// paragraph
+
+@mixin p {
+  font-size: 1.1rem;
+}
+
+// netting edge and more or less round
+
+@mixin border($size) {
+  @if $size == 50 {
+    border-radius: 50%;
+  } @else if $size == 7 {
+    border-radius: 7px;
+  }
+}
