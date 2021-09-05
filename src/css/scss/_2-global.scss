@@ -10,10 +10,13 @@ body {
 
 header {
   max-width: 1440px;
-  justify-content: space-between;
-  padding: 60px 100px;
-  display: flex;
   margin: 0 auto;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h1 {

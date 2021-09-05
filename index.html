@@ -14,21 +14,27 @@
   </head>
 
   <body>
-    <header>
-      <div class="container-logo">
-        <a>
-          <img src="/src/assets/images/logo.svg" alt="LoopStudios" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a>About</a></li>
-          <li><a>Careers</a></li>
-          <li><a>Events</a></li>
-          <li><a>Products</a></li>
-          <li><a>Support</a></li>
+    <header id="header">
+      <a id="logo" href=""><img src="/src/assets/images/logo.svg" /></a>
+      <nav id="nav">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <img id="hamburger" src="/src/assets/icons/icon-hamburger.svg" ></img>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="/">Sobre</a></li>
+          <li><a href="/">Produtos</a></li>
+          <li><a href="/">Portfólio</a></li>
+          <li><a href="/">Contato</a></li>
         </ul>
       </nav>
     </header>
+    <script src="./script.js"></script>
   </body>
+  <script src="/src/script.js"></script>
 </html>

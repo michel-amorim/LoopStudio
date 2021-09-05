@@ -3,11 +3,11 @@
 @mixin d($size) {
   @if $size == l {
   } @else if $size == t {
-    @media screen and (max-width: $t-device) {
+    @media (max-width: $t-device) {
       @content;
     }
   } @else if $size == m {
-    @media screen and (max-width: $m-device) {
+    @media (max-width: $m-device) {
       @content;
     }
   }
