@@ -16,10 +16,10 @@
 // h2, h2
 @mixin h($size) {
   @if $size == 1 {
-    font-size: 3.2rem;
+    font-size: 6rem;
   }
   @if $size == 2 {
-    font-size: 2.1rem;
+    font-size: 4rem;
   }
 
   // Mobile
@@ -46,4 +46,9 @@
   } @else if $size == 7 {
     border-radius: 7px;
   }
+}
+
+@mixin max {
+  max-width: $l-device;
+  margin: 0 auto;
 }

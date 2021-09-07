@@ -14,27 +14,58 @@
   </head>
 
   <body>
-    <header id="header">
-      <a id="logo" href=""><img src="/src/assets/images/logo.svg" /></a>
-      <nav id="nav">
-        <button
-          aria-label="Abrir Menu"
-          id="btn-mobile"
-          aria-haspopup="true"
-          aria-controls="menu"
-          aria-expanded="false"
-        >
-          <img id="hamburger" src="/src/assets/icons/icon-hamburger.svg" ></img>
-        </button>
-        <ul id="menu" role="menu">
-          <li><a href="/">Sobre</a></li>
-          <li><a href="/">Produtos</a></li>
-          <li><a href="/">Portfólio</a></li>
-          <li><a href="/">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <script src="./script.js"></script>
+    <main id="header">
+      <div class="content-header">
+        <header class="container-header">
+          <a id="logo" href="">
+            <img src="/src/assets/images/logo.svg" />
+          </a>
+
+          <nav id="nav">
+            <button
+              aria-label="Abrir Menu"
+              id="btn-mobile"
+              aria-haspopup="true"
+              aria-controls="menu"
+              aria-expanded="false"
+            >
+              <span id="hamburger"></span>
+            </button>
+
+            <ul id="menu" role="menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1>
+          Immersive <br />
+          Experiences <br />
+          That Deliver
+        </h1>
+      </div>
+    </main>
+
+    <section class="interactive">
+      <div class="interactive-img">
+        <img
+          src="/src/assets/images/desktop/image-interactive.jpg"
+          alt="interactive"
+        />
+      </div>
+      <div class="interactive-text">
+        <h2>The leader in interactive VR</h2>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual
+          reality projects for some of the best companies around the globe. Our
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
+        </p>
+      </div>
+    </section>
   </body>
   <script src="/src/script.js"></script>
 </html>

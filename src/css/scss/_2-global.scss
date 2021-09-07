@@ -5,18 +5,15 @@
 }
 
 body {
-  background-color: gray;
+  font-size: $font-alata;
 }
 
-header {
-  max-width: 1440px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  height: 70px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+main {
+  background: url("/src/assets/images/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 4rem 2rem 5rem 4rem;
+  margin-bottom: 162px;
 }
 
 h1 {
