@@ -1,8 +1,7 @@
 // media query
 
 @mixin d($size) {
-  @if $size == l {
-  } @else if $size == t {
+  @if $size == t {
     @media (max-width: $t-device) {
       @content;
     }
@@ -15,27 +14,41 @@
 
 // h2, h2
 @mixin h($size) {
+  // padrão
+  font-weight: 300;
+  text-transform: uppercase;
+
+  // h1
   @if $size == 1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
-  @if $size == 2 {
-    font-size: 4rem;
+  // h2
+  @else if $size == 2 {
+    font-size: 3.5rem;
   }
 
-  // Mobile
+  // h1 tablet
+  @else if $size == h1t {
+    font-size: 5rem;
+  }
 
-  @if $size == h1m {
-    font-size: 2.2rem;
-    line-height: 1.8rem;
-  } @else if $size == h2m {
+  // h2 tablet
+  @else if $size == h2t {
     font-size: 1.9rem;
+  }
+
+  // h1 mobile
+  @else if $size == h1m {
+    font-size: 2.5rem;
   }
 }
 
 // paragraph
 
 @mixin p {
-  font-size: 1.1rem;
+  line-height: 1.7em;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 // netting edge and more or less round

@@ -12,18 +12,30 @@ main {
   background: url("/src/assets/images/desktop/image-hero.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
-  padding: 4rem 2rem 5rem 4rem;
+  height: 700px;
   margin-bottom: 162px;
+  @include d(m) {
+    margin-bottom: 96px;
+  }
 }
 
 h1 {
   @include h(1);
+  // max-1024px
+  @include d(t) {
+    @include h(h1t);
+  }
+  // max-600px
+  @include d(m) {
+    @include h(h1m);
+  }
 }
 
 h2 {
   @include h(2);
-  @include d(m) {
-    @include h(h2-m);
+  // max-1024
+  @include d(t) {
+    @include h(h2t);
   }
 }
 

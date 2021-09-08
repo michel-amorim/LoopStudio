@@ -1,40 +1,73 @@
 // DeskTop
 
 .content-header {
-  max-width: $l-device;
-  margin: 0 auto;
+  padding: 5rem;
+  @include max;
+  @include d(t) {
+    padding: 2rem 1.5rem;
+  }
   h1 {
-    font: 300 6em "Josefin Sans", sans-serif;
-    width: 100%;
-    max-width: 800px;
+    font-family: $font-josefin;
     padding: 38px 39px 28px;
-    text-transform: uppercase;
-    line-height: 0.98em;
     border: 2px solid $primary-white;
     color: $primary-white;
     margin: 80px 0 80px 0;
+    @include d(m) {
+      padding: 23px 16px 23px 16px;
+      margin: 40px 0 40px 0;
+      letter-spacing: 1px;
+    }
+  }
+  .content-text {
+    display: flex;
+    @include d(t) {
+      justify-content: center;
+    }
   }
 }
 .container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include d(m) {
+    margin-bottom: 140px;
+  }
+  .logo-header img {
+    width: 100%;
+  }
 }
 
 #menu {
   display: flex;
   gap: 30px;
   a {
+    padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+    position: relative;
     font-family: $font-alata;
     color: $primary-white;
-    padding: 0.5em;
+    position: relative;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 50%;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      left: 25%;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
   }
 }
+
 #btn-mobile {
   display: none;
 }
 
 // Break Point
+
 @include d(t) {
   #btn-mobile {
     display: flex;
@@ -44,14 +77,17 @@
     background: none;
     cursor: pointer;
     gap: 0.5rem;
+    @include d(m) {
+      padding: 0;
+      gap: 0;
+    }
   }
   #menu {
     display: block;
     position: absolute;
     width: 100%;
-    top: 70px;
+    top: 100px;
     right: 0px;
-    background: black;
     transition: 0.3s;
     z-index: 1000;
     height: 0px;
@@ -60,7 +96,6 @@
     a {
       padding: 1rem 0;
       margin: 0 1rem;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     }
   }
   #nav.active #menu {
