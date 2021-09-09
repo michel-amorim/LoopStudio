@@ -11,6 +11,10 @@
   justify-content: space-between;
   margin-bottom: 58px;
   align-items: center;
+  @include d(m) {
+    justify-content: center;
+    margin-bottom: 0;
+  }
   .btn {
     font-size: 1.2em;
     font-family: $font-alata;
@@ -27,6 +31,39 @@
     &:hover {
       background: $primary-black;
       color: $primary-white;
+    }
+    @include d(m) {
+      display: none;
+    }
+  }
+}
+
+.creations-nav {
+  @include d(m) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .btn-mobile {
+    display: none;
+    @include d(m) {
+      display: flex;
+      align-self: center;
+      font-size: 1em;
+      font-family: $font-alata;
+      font-weight: 300;
+      text-align: center;
+      color: $primary-black;
+      background: transparent;
+      border: 1px solid $primary-black;
+      border-radius: 2px;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      margin-top: 25px;
+      letter-spacing: 5px;
+      &:hover {
+        background: $primary-black;
+        color: $primary-white;
+      }
     }
   }
 }

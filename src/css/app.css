@@ -416,6 +416,10 @@ p {
   justify-content: space-between;
   margin-bottom: 58px;
   align-items: center; }
+  @media (max-width: 600px) {
+    .content-all {
+      justify-content: center;
+      margin-bottom: 0; } }
   .content-all .btn {
     font-size: 1.2em;
     font-family: "Alata", sans-serif;
@@ -430,8 +434,38 @@ p {
     cursor: pointer;
     letter-spacing: 5px; }
     .content-all .btn:hover {
-      background: #000;
-      color: #fff; }
+      background: black;
+      color: white; }
+    @media (max-width: 600px) {
+      .content-all .btn {
+        display: none; } }
+
+@media (max-width: 600px) {
+  .creations-nav {
+    display: flex;
+    flex-direction: column-reverse; } }
+
+.creations-nav .btn-mobile {
+  display: none; }
+  @media (max-width: 600px) {
+    .creations-nav .btn-mobile {
+      display: flex;
+      align-self: center;
+      font-size: 1em;
+      font-family: "Alata", sans-serif;
+      font-weight: 300;
+      text-align: center;
+      color: black;
+      background: transparent;
+      border: 1px solid black;
+      border-radius: 2px;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      margin-top: 25px;
+      letter-spacing: 5px; }
+      .creations-nav .btn-mobile:hover {
+        background: black;
+        color: white; } }
 
 .content-creations {
   display: grid;
@@ -447,7 +481,7 @@ p {
     display: flex;
     height: 100%;
     align-items: flex-end;
-    color: #fff;
+    color: white;
     text-transform: uppercase;
     font-size: 2.5em;
     font-family: "Josefin Sans", sans-serif;
