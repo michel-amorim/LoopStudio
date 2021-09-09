@@ -1,0 +1,16 @@
+.container-creations {
+  @include max;
+  padding: 2ren;
+  .list {
+    height: 450px;
+  }
+}
+.content-all {
+  display: flex;
+  justify-content: space-between;
+}
+.content-creations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}

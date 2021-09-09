@@ -1,4 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+.list-curiosity {
+  background-image: url("/src/assets/bg/curiosity.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-deep {
+  background-image: url("/src/assets/bg/deep.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-from {
+  background-image: url("/src/assets/bg/from.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-night {
+  background-image: url("/src/assets/bg/night.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-soccer {
+  background-image: url("/src/assets/bg/soccer.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-the {
+  background-image: url("/src/assets/bg/the.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-pocket {
+  background-image: url("/src/assets/bg/pocket.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-make {
+  background-image: url("/src/assets/bg/make.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 html,
 body,
 div,
@@ -300,7 +348,8 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-end;
-  padding: 0 2rem 0 2rem; }
+  padding: 0 2rem 0 2rem;
+  margin-bottom: 135px; }
   .interactive .interactive-img {
     position: relative;
     z-index: 1;
@@ -347,3 +396,19 @@ p {
         letter-spacing: 1px; }
       .interactive-text P {
         padding: 0 15px; } }
+
+.container-creations {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2ren; }
+  .container-creations .list {
+    height: 450px; }
+
+.content-all {
+  display: flex;
+  justify-content: space-between; }
+
+.content-creations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; }
