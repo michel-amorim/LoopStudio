@@ -8,6 +8,7 @@
   .interactive-img {
     position: relative;
     z-index: 1;
+    margin-bottom: 21px;
     img {
       width: 100%;
     }
@@ -16,9 +17,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem 0 2rem;
     .interactive-img {
       position: inherit;
       width: 100%;
+      margin-bottom: 50px;
     }
   }
 }
@@ -27,9 +30,9 @@
   background: $primary-white;
   position: relative;
   z-index: 2;
-  bottom: 0;
+  transform: translateY(2px);
+  bottom: 5%;
   right: 10%;
-  max-height: 700px;
   padding-left: 90px;
   padding-top: 90px;
   h2 {
@@ -40,13 +43,21 @@
     color: $primary-dark-gray;
     margin-top: 26px;
   }
+
+  @include d(ip) {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
   @include d(t) {
     position: inherit;
     padding-left: 0;
     padding-top: 0;
-    max-width: 100%;
+    text-align: center;
     h2 {
-      text-align: center;
+      letter-spacing: 1px;
+    }
+    P {
+      padding: 0 15px;
     }
   }
 }

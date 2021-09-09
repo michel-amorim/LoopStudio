@@ -1,11 +1,20 @@
-// media query
+// break point
 
 @mixin d($size) {
-  @if $size == t {
+  // Ipad Pro - 1024px
+  @if $size == ip {
+    @media (max-width: $ip-device) {
+      @content;
+    }
+  }
+  // Tablet - Max-1023px
+  @else if $size == t {
     @media (max-width: $t-device) {
       @content;
     }
-  } @else if $size == m {
+  }
+  // Mobile - Nax-600px
+  @else if $size == m {
     @media (max-width: $m-device) {
       @content;
     }
@@ -22,24 +31,26 @@
   @if $size == 1 {
     font-size: 4.5rem;
   }
-  // h2
-  @else if $size == 2 {
-    font-size: 3.5rem;
-  }
-
   // h1 tablet
   @else if $size == h1t {
     font-size: 5rem;
   }
-
-  // h2 tablet
-  @else if $size == h2t {
-    font-size: 1.9rem;
-  }
-
   // h1 mobile
   @else if $size == h1m {
     font-size: 2.5rem;
+  }
+
+  // h2
+  @else if $size == 2 {
+    font-size: 3.5rem;
+  }
+  // h2 Ipad
+  @else if $size == h2i {
+    font-size: 3rem;
+  }
+  // h2 tablet
+  @else if $size == h2t {
+    font-size: 2rem;
   }
 }
 

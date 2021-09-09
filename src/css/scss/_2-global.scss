@@ -12,7 +12,7 @@ main {
   background: url("/src/assets/images/desktop/image-hero.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
-  height: 700px;
+  height: 650px;
   margin-bottom: 162px;
   @include d(m) {
     margin-bottom: 96px;
@@ -21,7 +21,7 @@ main {
 
 h1 {
   @include h(1);
-  // max-1024px
+  // max-1000px
   @include d(t) {
     @include h(h1t);
   }
@@ -33,7 +33,11 @@ h1 {
 
 h2 {
   @include h(2);
-  // max-1024
+  // IpadPRO
+  @include d(ip) {
+    @include h(h2i);
+  }
+  // max-1000px
   @include d(t) {
     @include h(h2t);
   }
