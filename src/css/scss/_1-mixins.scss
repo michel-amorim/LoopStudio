@@ -24,6 +24,7 @@
 // h2, h2
 @mixin h($size) {
   // padrão
+  font-family: $font-josefin;
   font-weight: 300;
   text-transform: uppercase;
 

@@ -1,16 +1,59 @@
 .container-creations {
   @include max;
-  padding: 2ren;
+  padding: 0 2rem;
   .list {
     height: 450px;
   }
 }
 .content-all {
+  height: 120px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 58px;
+  align-items: center;
+  .btn {
+    font-size: 1.2em;
+    font-family: $font-alata;
+    font-weight: 300;
+    background: transparent;
+    padding: 13px 38px;
+    border: 1px solid $primary-black;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: $primary-black;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 5px;
+    &:hover {
+      background: $primary-black;
+      color: $primary-white;
+    }
+  }
 }
 .content-creations {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  @include d(t) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include d(m) {
+    grid-template-columns: 100%;
+  }
+  a {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    color: $primary-white;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-family: $font-josefin;
+    font-weight: 300;
+    padding: 0 0 40px 20px;
+    transition: all 0.3s;
+    line-height: 1.1em;
+    &:hover {
+      background: $bg-white;
+    }
+  }
 }

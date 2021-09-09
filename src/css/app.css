@@ -195,31 +195,37 @@ main {
       margin-bottom: 96px; } }
 
 h1 {
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 4.5rem; }
   @media (max-width: 1000px) {
     h1 {
+      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
       font-size: 5rem; } }
   @media (max-width: 600px) {
     h1 {
+      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
       font-size: 2.5rem; } }
 
 h2 {
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 3.5rem; }
   @media (max-width: 1024px) {
     h2 {
+      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
       font-size: 3rem; } }
   @media (max-width: 1000px) {
     h2 {
+      font-family: "Josefin Sans", sans-serif;
       font-weight: 300;
       text-transform: uppercase;
       font-size: 2rem; } }
@@ -400,15 +406,54 @@ p {
 .container-creations {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 2ren; }
+  padding: 0 2rem; }
   .container-creations .list {
     height: 450px; }
 
 .content-all {
+  height: 120px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 58px;
+  align-items: center; }
+  .content-all .btn {
+    font-size: 1.2em;
+    font-family: "Alata", sans-serif;
+    font-weight: 300;
+    background: transparent;
+    padding: 13px 38px;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 5px; }
+    .content-all .btn:hover {
+      background: #000;
+      color: #fff; }
 
 .content-creations {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px; }
+  @media (max-width: 1000px) {
+    .content-creations {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    .content-creations {
+      grid-template-columns: 100%; } }
+  .content-creations a {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    padding: 0 0 40px 20px;
+    transition: all 0.3s;
+    line-height: 1.1em; }
+    .content-creations a:hover {
+      background: rgba(255, 255, 255, 0.7); }
