@@ -1,0 +1,21 @@
+.container-footer {
+  @include max;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  .nav-flex-footer {
+    display: flex;
+    gap: 20px;
+  }
+  a {
+    color: $primary-white;
+  }
+  p {
+    color: $primary-dark-gray;
+    margin-top: 20px;
+  }
+}
+
+.logo-footer {
+  margin-bottom: 20px;
+}

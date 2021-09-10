@@ -1,6 +1,7 @@
 .container-creations {
   @include max;
   padding: 0 2rem;
+  margin-bottom: 180px;
   .list {
     height: 450px;
   }

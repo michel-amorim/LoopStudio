@@ -19,6 +19,10 @@ main {
   }
 }
 
+footer {
+  background: $primary-black;
+}
+
 h1 {
   @include h(1);
   // max-1000px

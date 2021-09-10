@@ -194,6 +194,9 @@ main {
     main {
       margin-bottom: 96px; } }
 
+footer {
+  background: black; }
+
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -406,7 +409,8 @@ p {
 .container-creations {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  margin-bottom: 180px; }
   .container-creations .list {
     height: 450px; }
 
@@ -491,3 +495,21 @@ p {
     line-height: 1.1em; }
     .content-creations a:hover {
       background: rgba(255, 255, 255, 0.7); }
+
+.container-footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between; }
+  .container-footer .nav-flex-footer {
+    display: flex;
+    gap: 20px; }
+  .container-footer a {
+    color: white; }
+  .container-footer p {
+    color: dimgray;
+    margin-top: 20px; }
+
+.logo-footer {
+  margin-bottom: 20px; }
