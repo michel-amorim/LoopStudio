@@ -9,13 +9,14 @@ body {
 }
 
 main {
-  background: url("/src/assets/images/desktop/image-hero.jpg") no-repeat;
+  background-image: url("/src/assets/images/desktop/image-hero.jpg");
   background-size: cover;
   background-position: top center;
-  height: 650px;
   margin-bottom: 162px;
   @include d(m) {
-    margin-bottom: 96px;
+    background-image: url("/src/assets/images/mobile/image-hero.jpg");
+    margin-bottom: 80px;
+    height: 600px;
   }
 }
 

@@ -2,8 +2,16 @@
   @include max;
   padding: 0 2rem;
   margin-bottom: 180px;
+  @include d(m) {
+    margin-bottom: 80px;
+  }
   .list {
     height: 450px;
+    @include d(m) {
+      height: inherit;
+      scroll-snap-align: start;
+      pointer-events: none;
+    }
   }
 }
 .content-all {
@@ -39,7 +47,7 @@
   }
 }
 
-.creations-nav {
+#items-wrapper {
   @include d(m) {
     display: flex;
     flex-direction: column-reverse;
@@ -68,7 +76,7 @@
     }
   }
 }
-.content-creations {
+#items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -76,7 +84,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
   @include d(m) {
-    grid-template-columns: 100%;
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
   a {
     display: flex;
@@ -87,11 +100,20 @@
     font-size: 2.5em;
     font-family: $font-josefin;
     font-weight: 300;
-    padding: 0 0 40px 20px;
+    padding: 0 0 60px 20px;
     transition: all 0.3s;
     line-height: 1.1em;
     &:hover {
       background: $bg-white;
+    }
+    @include d(m) {
+      height: 300px;
+      width: 300px;
+      font-size: 1.5em;
+      padding: 0 0 20px 10px;
+      &:hover {
+        background: none;
+      }
     }
   }
 }

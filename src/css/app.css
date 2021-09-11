@@ -185,14 +185,15 @@ body {
   font-size: "Alata", sans-serif; }
 
 main {
-  background: url("/src/assets/images/desktop/image-hero.jpg") no-repeat;
+  background-image: url("/src/assets/images/desktop/image-hero.jpg");
   background-size: cover;
   background-position: top center;
-  height: 650px;
   margin-bottom: 162px; }
   @media (max-width: 600px) {
     main {
-      margin-bottom: 96px; } }
+      background-image: url("/src/assets/images/mobile/image-hero.jpg");
+      margin-bottom: 80px;
+      height: 600px; } }
 
 footer {
   background: black; }
@@ -244,7 +245,7 @@ p {
   margin: 0 auto; }
   @media (max-width: 1000px) {
     .content-header {
-      padding: 2rem 2rem; } }
+      padding: 2rem 1rem; } }
   .content-header h1 {
     font-family: "Josefin Sans", sans-serif;
     padding: 38px 39px 28px;
@@ -268,9 +269,7 @@ p {
   align-items: center; }
   @media (max-width: 600px) {
     .container-header {
-      margin-bottom: 140px; } }
-  .container-header .logo-header img {
-    width: 100%; }
+      margin-bottom: 120px; } }
 
 #menu {
   display: flex;
@@ -359,22 +358,27 @@ p {
   align-items: flex-end;
   padding: 0 2rem 0 2rem;
   margin-bottom: 135px; }
-  .interactive .interactive-img {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 21px; }
-    .interactive .interactive-img img {
-      width: 100%; }
   @media (max-width: 1000px) {
     .interactive {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 2rem 0 2rem; }
-      .interactive .interactive-img {
-        position: inherit;
-        width: 100%;
-        margin-bottom: 50px; } }
+      padding: 0 2rem 0 2rem; } }
+  @media (max-width: 600px) {
+    .interactive {
+      margin-bottom: 50px; } }
+
+.interactive-img-desktop {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 21px; }
+  .interactive-img-desktop img {
+    width: 100%; }
+  @media (max-width: 1000px) {
+    .interactive-img-desktop .interactive-img-desktop {
+      position: inherit;
+      width: 100%;
+      margin-bottom: 50px; } }
 
 .interactive-text {
   background: white;
@@ -411,8 +415,16 @@ p {
   margin: 0 auto;
   padding: 0 2rem;
   margin-bottom: 180px; }
+  @media (max-width: 600px) {
+    .container-creations {
+      margin-bottom: 80px; } }
   .container-creations .list {
     height: 450px; }
+    @media (max-width: 600px) {
+      .container-creations .list {
+        height: inherit;
+        scroll-snap-align: start;
+        pointer-events: none; } }
 
 .content-all {
   height: 120px;
@@ -445,14 +457,14 @@ p {
         display: none; } }
 
 @media (max-width: 600px) {
-  .creations-nav {
+  #items-wrapper {
     display: flex;
     flex-direction: column-reverse; } }
 
-.creations-nav .btn-mobile {
+#items-wrapper .btn-mobile {
   display: none; }
   @media (max-width: 600px) {
-    .creations-nav .btn-mobile {
+    #items-wrapper .btn-mobile {
       display: flex;
       align-self: center;
       font-size: 1em;
@@ -467,21 +479,26 @@ p {
       padding: 10px 30px;
       margin-top: 25px;
       letter-spacing: 5px; }
-      .creations-nav .btn-mobile:hover {
+      #items-wrapper .btn-mobile:hover {
         background: black;
         color: white; } }
 
-.content-creations {
+#items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px; }
   @media (max-width: 1000px) {
-    .content-creations {
+    #items {
       grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) {
-    .content-creations {
-      grid-template-columns: 100%; } }
-  .content-creations a {
+    #items {
+      display: flex;
+      overflow: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth; } }
+  #items a {
     display: flex;
     height: 100%;
     align-items: flex-end;
@@ -490,11 +507,19 @@ p {
     font-size: 2.5em;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
-    padding: 0 0 40px 20px;
+    padding: 0 0 60px 20px;
     transition: all 0.3s;
     line-height: 1.1em; }
-    .content-creations a:hover {
+    #items a:hover {
       background: rgba(255, 255, 255, 0.7); }
+    @media (max-width: 600px) {
+      #items a {
+        height: 300px;
+        width: 300px;
+        font-size: 1.5em;
+        padding: 0 0 20px 10px; }
+        #items a:hover {
+          background: none; } }
 
 .container-footer {
   max-width: 1440px;

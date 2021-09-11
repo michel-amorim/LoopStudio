@@ -7,7 +7,7 @@
   // tablet
 
   @include d(t) {
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
   }
   h1 {
     font-family: $font-josefin;
@@ -36,10 +36,7 @@
   // mobile
 
   @include d(m) {
-    margin-bottom: 140px;
-  }
-  .logo-header img {
-    width: 100%;
+    margin-bottom: 120px;
   }
 }
 

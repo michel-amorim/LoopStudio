@@ -5,21 +5,26 @@
   align-items: flex-end;
   padding: 0 2rem 0 2rem;
   margin-bottom: 135px;
-
-  .interactive-img {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 21px;
-    img {
-      width: 100%;
-    }
-  }
   @include d(t) {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 2rem 0 2rem;
-    .interactive-img {
+  }
+  @include d(m) {
+    margin-bottom: 50px;
+  }
+}
+
+.interactive-img-desktop {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 21px;
+  img {
+    width: 100%;
+  }
+  @include d(t) {
+    .interactive-img-desktop {
       position: inherit;
       width: 100%;
       margin-bottom: 50px;
