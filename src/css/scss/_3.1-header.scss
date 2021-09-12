@@ -40,6 +40,11 @@
   }
 }
 
+.logo-header {
+  position: relative;
+  z-index: 10000;
+}
+
 #menu {
   display: flex;
   gap: 30px;
@@ -83,6 +88,8 @@
     @include d(m) {
       padding: 0;
       gap: 0;
+      position: relative;
+      z-index: 9999;
     }
   }
   #menu {
@@ -91,7 +98,6 @@
     width: 100%;
     top: 100px;
     right: 0px;
-    transition: 0.3s;
     z-index: 1000;
     height: 0px;
     visibility: hidden;
@@ -102,9 +108,15 @@
     }
   }
   #nav.active #menu {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 0px);
     visibility: visible;
     overflow-y: auto;
+    background-color: $primary-black;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
   }
   #hamburger {
     border-top: 2px solid;

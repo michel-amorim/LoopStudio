@@ -10,7 +10,7 @@ A aplicação consiste em uma Landing-page, onde é possivel ter o primeiro cont
 
 ## Layout web
 
-![Visualização do design Web](.doc/design/desktop.preview.jpg)
+![Visualização do design Web](./doc/design/desktop.preview.jpg)
 
 ##
 
