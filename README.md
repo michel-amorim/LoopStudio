@@ -28,7 +28,7 @@ A aplicação consiste em uma Landing-page, onde é possivel ter o primeiro cont
 
 ## Interface visual para SASS
 
-Scout App
+- Scout App
 
 ## Implantação em produção
 
