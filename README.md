@@ -1,6 +1,5 @@
-In progress
 
-# LOOPSTUDIOS
+# _LoopStudios_
 
 ## Sobre o projeto
 
