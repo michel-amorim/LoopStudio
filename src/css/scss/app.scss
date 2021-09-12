@@ -4,6 +4,7 @@
 
 // Mixins and Typography
 
+@import "1-loop";
 @import "1-mixins";
 @import "1-typography";
 
@@ -14,4 +15,7 @@
 
 // Layout
 
-@import "3-header";
+@import "3.1-header";
+@import "3.3-interactive";
+@import "3.4-creations";
+@import "3.5-footer";

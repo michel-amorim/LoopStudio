@@ -5,25 +5,46 @@
 }
 
 body {
-  background-color: gray;
+  font-size: $font-alata;
 }
 
-header {
-  max-width: 1440px;
-  justify-content: space-between;
-  padding: 60px 100px;
-  display: flex;
-  margin: 0 auto;
+main {
+  background-image: url("/src/assets/images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: top center;
+  margin-bottom: 162px;
+  @include d(m) {
+    background-image: url("/src/assets/images/mobile/image-hero.jpg");
+    margin-bottom: 80px;
+    height: 600px;
+  }
+}
+
+footer {
+  background: $primary-black;
 }
 
 h1 {
   @include h(1);
+  // max-1000px
+  @include d(t) {
+    @include h(h1t);
+  }
+  // max-600px
+  @include d(m) {
+    @include h(h1m);
+  }
 }
 
 h2 {
   @include h(2);
-  @include d(m) {
-    @include h(h2-m);
+  // IpadPRO
+  @include d(ip) {
+    @include h(h2i);
+  }
+  // max-1000px
+  @include d(t) {
+    @include h(h2t);
   }
 }
 

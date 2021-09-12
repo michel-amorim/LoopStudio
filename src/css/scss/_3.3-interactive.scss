@@ -1,0 +1,69 @@
+.interactive {
+  @include max;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  padding: 0 2rem 0 2rem;
+  margin-bottom: 135px;
+  @include d(t) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  @include d(m) {
+    margin-bottom: 50px;
+  }
+}
+
+.interactive-img-desktop {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 21px;
+  img {
+    width: 100%;
+  }
+  @include d(t) {
+    .interactive-img-desktop {
+      position: inherit;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.interactive-text {
+  background: $primary-white;
+  position: relative;
+  z-index: 2;
+  transform: translateY(2px);
+  bottom: 5%;
+  right: 10%;
+  padding-left: 90px;
+  padding-top: 90px;
+  h2 {
+    font-family: $font-josefin;
+    text-transform: uppercase;
+  }
+  p {
+    color: $primary-dark-gray;
+    margin-top: 26px;
+  }
+
+  @include d(ip) {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  @include d(t) {
+    position: inherit;
+    padding-left: 0;
+    padding-top: 0;
+    text-align: center;
+    h2 {
+      letter-spacing: 1px;
+    }
+    P {
+      padding: 0 15px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@each $creation in $creations {
+  .list-#{$creation} {
+    background-image: url("/src/assets/bg/#{$creation}.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

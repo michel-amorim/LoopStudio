@@ -1,0 +1,147 @@
+// DeskTop
+
+.content-header {
+  padding: 5rem 2rem;
+  @include max;
+
+  // tablet
+
+  @include d(t) {
+    padding: 2rem 1rem;
+  }
+  h1 {
+    font-family: $font-josefin;
+    padding: 38px 39px 28px;
+    border: 2px solid $primary-white;
+    color: $primary-white;
+    margin: 80px 0 80px 0;
+    @include d(m) {
+      padding: 23px 16px 23px 16px;
+      margin: 40px 0 40px 0;
+      letter-spacing: 1px;
+    }
+  }
+  .content-text {
+    display: flex;
+    @include d(t) {
+      justify-content: center;
+    }
+  }
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // mobile
+
+  @include d(m) {
+    margin-bottom: 120px;
+  }
+}
+
+.logo-header {
+  position: relative;
+  z-index: 10000;
+}
+
+#menu {
+  display: flex;
+  gap: 30px;
+  a {
+    padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+    position: relative;
+    font-family: $font-alata;
+    color: $primary-white;
+    position: relative;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 50%;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      left: 25%;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+#btn-mobile {
+  display: none;
+}
+
+// Break Point
+
+@include d(t) {
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    @include d(m) {
+      padding: 0;
+      gap: 0;
+      position: relative;
+      z-index: 9999;
+    }
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    right: 0px;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+    }
+  }
+  #nav.active #menu {
+    height: calc(100vh - 0px);
+    visibility: visible;
+    overflow-y: auto;
+    background-color: $primary-black;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color: $primary-white;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}

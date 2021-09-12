@@ -1,6 +1,7 @@
 // Primary colors
 
 $primary-white: hsl(0, 0%, 100%);
+$bg-white: rgba(255, 255, 255, 0.7);
 $primary-black: hsl(0, 0%, 0%);
 $primary-gray: hsl(0, 0%, 55%);
 $primary-dark-gray: hsl(0, 0%, 41%);
@@ -8,10 +9,15 @@ $primary-dark-gray: hsl(0, 0%, 41%);
 // Break-Points
 
 $l-device: 1440px;
-$t-device: 1023px;
+$ip-device: 1024px;
+$t-device: 1000px;
 $m-device: 600px;
 
 // Font Family
 
 $font-alata: "Alata", sans-serif;
 $font-josefin: "Josefin Sans", sans-serif;
+
+// Loop
+
+$creations: curiosity deep from night soccer the pocket make;
