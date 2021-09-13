@@ -85,7 +85,7 @@
     background: none;
     cursor: pointer;
     gap: 0.5rem;
-    @include d(m) {
+    @include d(t) {
       padding: 0;
       gap: 0;
       position: relative;
