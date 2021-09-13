@@ -1,5 +1,7 @@
 
-# _LoopStudios_
+# LoopStudios
+
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/michel-amorim/LoopStudio/blob/master/LICENSE) 
 
 ## Sobre o projeto
 
